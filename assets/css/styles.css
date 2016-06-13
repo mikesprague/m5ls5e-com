@@ -1,0 +1,48 @@
+* {
+  text-rendering: optimizeLegibility;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url(../img/new_york_city.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  margin: 4rem auto;
+  color: #e1ddc9;
+  letter-spacing: 0.50rem;
+  text-shadow: 2px 2px 4px #6a9179;
+  font-family: 'Roboto', sans-serif;
+}
+
+.my-avatar {
+  max-width: 16rem;
+  border: 0.75rem solid #6a9179;
+  margin-bottom: 4rem;
+  box-shadow: 2px 2px 4px #e1ddc9;
+}
+
+.dev-links {
+  margin: 0 4rem;
+  font-size: 7rem;
+}
+
+.dev-links a:link,
+.dev-links a:visited {
+  color: #6a9179;
+  text-shadow: 2px 2px 4px #e1ddc9;
+}
+
+.dev-links a:hover,
+.dev-links a:active {
+  color: #e1ddc9;
+  text-shadow: 2px 2px 4px #6a9179;
+}
