@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>mikesprague.me</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
     <style>
       * {
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
 
       html, body {
@@ -39,13 +40,13 @@
       }
 
       .my-avatar {
-        margin-top: 20%;
+        margin-top: 10vh;
         max-width: 180px;
         margin-bottom: 30px;
       }
 
       .dev-links {
-        margin: 2% 4% 0 4%;
+        margin: 2% 3% 0 3%;
         font-size: 64px;
       }
 
@@ -64,13 +65,21 @@
   </head>
   <body>
     <div class="container-fluid">
-      <img alt="Mike Sprague" class="img-circle center-block my-avatar" src="assets/img/my-avatar-painted.jpg">
-      <h1 class="text-xs-center display-3 font-weight-bold">Mike Sprague</h1>
-      <ul class="list-inline text-xs-center">
-        <li class="list-inline-item dev-links"><a href="https://github.com/mikesprague" target="_blank" title="GitHub"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
-        <li class="list-inline-item dev-links"><a href="https://twitter.com/_mikesprague" target="_blank" title="Twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-        <li class="list-inline-item dev-links"><a href="https://www.linkedin.com/in/mikesprague" target="_blank" title="LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-      </ul>
+      <div class="row">
+        <div class="col-xs-12">
+          <img alt="Mike Sprague" class="img-circle center-block my-avatar" src="assets/img/my-avatar-painted.jpg">
+          <h1 class="text-center">Mike Sprague</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item dev-links"><a href="https://github.com/mikesprague" target="_blank" title="GitHub"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
+            <li class="list-inline-item dev-links"><a href="https://twitter.com/_mikesprague" target="_blank" title="Twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+            <li class="list-inline-item dev-links"><a href="https://www.linkedin.com/in/mikesprague" target="_blank" title="LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <script>
       window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
