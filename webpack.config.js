@@ -31,46 +31,46 @@ const config = {
   },
   module: {
     rules: [{
-        test: /\.(js)$/,
-        use: [{
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/env']
+      test: /\.(js)$/,
+      use: [{
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/env']
+        },
+      }],
+    },
+    {
+      rules: [{
+        test: /\.(scss)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 1,
+            }
           },
-        }],
-      },
-      {
-        rules: [{
-          test: /\.(scss)$/,
-          use: [
-            MiniCssExtractPlugin.loader,
-            {
-              loader: 'css-loader',
-              options: {
-                sourceMap: true,
-                importLoaders: 1,
-              }
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                sourceMap: true,
-              }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins() {
-                  return [autoprefixer({
-                    browsers: 'last 3 versions'
-                  })];
-                },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins() {
+                return [autoprefixer({
+                  browsers: 'last 3 versions'
+                })];
               },
             },
-          ],
-        }],
-      },
-    ],
+          },
+        ],
+      }],
+    },
+  ],
   },
   plugins: [
     new MiniCssExtractPlugin({
