@@ -1,0 +1,37 @@
+@import "~bulma/bulma";
+
+html,
+body {
+  background-color: #031c25;
+}
+
+body {
+  background-image: url(/images/pixels.png) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-body {
+  margin-top: -5em;
+}
+
+a.social-links {
+  font-size: 1.3em;
+  line-height: 1.8;
+
+  &:link,
+  &:visited {
+    border: none;
+    color: #b5b5b5
+  }
+
+  &:hover {
+    border-top: 1px dashed;
+    border-bottom: 1px dashed;
+    color: #d9d9d9;
+  }
+
+  &:active {
+    color: #d9d9d9;
+  }
+}
