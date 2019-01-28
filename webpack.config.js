@@ -1,13 +1,15 @@
 const path = require('path');
-const webpack = require('webpack');
+const WebPackBar = require('webpackbar');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const UnCSSPlugin = require('uncss-webpack-plugin');
+const purgecss = require('@fullhuman/postcss-purgecss');
+const cssnano = require('cssnano');
 const autoprefixer = require('autoprefixer');
+
 const mode = process.env.NODE_ENV || 'production';
 
 const config = {
@@ -22,7 +24,7 @@ const config = {
         sourceMap: true,
       }),
       new OptimizeCSSAssetsPlugin(),
-    ]
+    ],
   },
   mode,
   output: {
@@ -35,46 +37,51 @@ const config = {
       use: [{
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/env']
+          presets: ['@babel/env'],
         },
       }],
     },
     {
       rules: [{
-        test: /\.(scss)$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              importLoaders: 1,
-            }
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              plugins() {
+                return [
+                  autoprefixer(),
+                  cssnano({ preset: 'default' }),
+                  purgecss({
+                    content: ['./src/**/*.html'],
+                    fontFace: true,
+                  }),
+                ];
+              },
+            },
           },
           {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-            }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins() {
-                return [autoprefixer({
-                  browsers: 'last 3 versions'
-                })];
-              },
             },
           },
         ],
       }],
-    },
-  ],
+    }],
   },
   plugins: [
+    new WebPackBar(),
     new MiniCssExtractPlugin({
-      filename: 'css/styles.css'
+      filename: 'css/styles.css',
     }),
     new HtmlWebpackPlugin({
       inject: false,
@@ -86,22 +93,12 @@ const config = {
       to: 'images/pixels.png',
       force: true,
     }]),
-    new UnCSSPlugin({
-      csspath: './dist/css',
-      stylesheets: [
-        './dist/css/styles.css',
-      ],
-      htmlroot: './dist',
-      html: [
-        './dist/index.html',
-      ]
-    }),
     new CompressionPlugin({
       filename: '[path].gz[query]',
       algorithm: 'gzip',
       test: /\.js$|\.css$|\.html$/,
       threshold: 8192,
-      minRatio: 0.8
+      minRatio: 0.8,
     }),
   ],
 };
