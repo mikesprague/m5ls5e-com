@@ -26,8 +26,8 @@
     "bulma": "^0.7.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
     "@babel/plugin-transform-runtime": "7.2.0",
     "@babel/plugin-transform-object-assign": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
@@ -39,8 +39,8 @@
     "copy-webpack-plugin": "^4.6.0",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.0",
-    "cssnano": "^4.1.9",
-    "eslint": "^5.13.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^5.14.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-compat": "^2.7.0",
     "eslint-plugin-html": "^5.0.3",
@@ -55,7 +55,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.2.2",
-    "webpack": "^4.29.3",
+    "webpack": "^4.29.4",
     "webpack-cli": "^3.2.3",
     "webpack-serve": "^2.0.3",
     "webpackbar": "^3.1.5"
