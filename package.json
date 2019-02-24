@@ -15,9 +15,9 @@
     "email": "mikesprague@gmail.com"
   },
   "engines": {
-    "node": ">= 11.6",
-    "npm": ">= 6.5",
-    "yarn": ">= 1.3"
+    "node": ">= 11.10",
+    "npm": ">= 6.7",
+    "yarn": ">= 1.13"
   },
   "license": "MIT",
   "dependencies": {
