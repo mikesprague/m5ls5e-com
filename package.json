@@ -62,15 +62,26 @@
   },
   "babel": {
     "plugins": [
-      "@babel/plugin-transform-runtime"
+      "@babel/plugin-transform-runtime",
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-transform-object-assign"
     ],
     "presets": [
-      "@babel/preset-env"
+      "@babel/preset-env", {
+        "targets": {
+          "browsers": [
+            "last 3 years",
+            "safari >= 8",
+            "IE 10"
+          ]
+        }
+      }
     ]
   },
   "browserslist": [
-    "last 2 years",
-    "IE 11"
+    "last 3 years",
+    "safari >= 8",
+    "IE 10"
   ],
   "eslintConfig": {
     "env": {
