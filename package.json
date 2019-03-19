@@ -30,7 +30,7 @@
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/plugin-transform-runtime": "7.4.0",
     "@babel/plugin-transform-object-assign": "^7.2.0",
-    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-env": "^7.4.0",
     "@babel/runtime": "^7.3.4",
     "@fullhuman/postcss-purgecss": "^1.1.0",
     "autoprefixer": "^9.5.0",
