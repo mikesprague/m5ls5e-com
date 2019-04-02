@@ -6,7 +6,7 @@
     "assets:watch": "yarn assets -d -w  --color true --display minimal",
     "build": "yarn clean && cross-env NODE_ENV=production yarn assets -p",
     "clean": "rm -rf dist",
-    "serve": "webpack-serve ./webpack.config.js --port 3000 --open",
+    "serve": "webpack-dev-server --color --hot --overlay --port 3000",
     "serve:dev": "cross-env NODE_ENV=development yarn serve",
     "serve:prod": "cross-env NODE_ENV=production yarn serve"
   },
@@ -57,7 +57,7 @@
     "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
-    "webpack-serve": "^2.0.3",
+    "webpack-dev-server": "^3.2.1",
     "webpackbar": "^3.1.5"
   },
   "babel": {
