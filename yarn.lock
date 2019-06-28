@@ -1599,15 +1599,6 @@ browserslist@^4.0.0:
     electron-to-chromium "^1.3.103"
     node-releases "^1.1.3"
 
-browserslist@^4.5.4:
-  version "4.6.2"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.6.2.tgz#574c665950915c2ac73a4594b8537a9eba26203f"
-  integrity sha512-2neU/V0giQy9h3XMPwLhEY3+Ao0uHSwHvU8Q1Ea6AgLVL1sXbX3dzPrJ8NWe5Hi4PoTkCYXOtVR9rfRLI0J/8Q==
-  dependencies:
-    caniuse-lite "^1.0.30000974"
-    electron-to-chromium "^1.3.150"
-    node-releases "^1.1.23"
-
 browserslist@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.6.0.tgz#5274028c26f4d933d5b1323307c1d1da5084c9ff"
@@ -1625,6 +1616,15 @@ browserslist@^4.6.1:
     caniuse-lite "^1.0.30000971"
     electron-to-chromium "^1.3.137"
     node-releases "^1.1.21"
+
+browserslist@^4.6.3:
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.6.3.tgz#0530cbc6ab0c1f3fc8c819c72377ba55cf647f05"
+  integrity sha512-CNBqTCq22RKM8wKJNowcqihHJ4SkI8CGeK7KOR9tPboXUuS5Zk5lQgzzTbs4oxD8x+6HUshZUa2OyNI9lR93bQ==
+  dependencies:
+    caniuse-lite "^1.0.30000975"
+    electron-to-chromium "^1.3.164"
+    node-releases "^1.1.23"
 
 buffer-from@^1.0.0:
   version "1.1.1"
@@ -1785,10 +1785,10 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-db@^1.0.30000957:
-  version "1.0.30000974"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000974.tgz#ffc887e57e7db7067da203b102071a1d2477c5c8"
-  integrity sha512-zeXkn1hbjMvXdadcyUELZnGu7OjlW3HK0956DWczM7ZJqGV4jFaPi8CidB8QiAj5xl5O9I+f7j9F0AFmXmGTpg==
+caniuse-db@^1.0.30000977:
+  version "1.0.30000978"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000978.tgz#6c71237ff5e2b759bc52496f560e2f6287e90a28"
+  integrity sha512-UTzb0WomXxeqhAn3HgygItnkQeiLujN/O4D6hhB4ccSgktBysAbO/duUBJiNsPyxn/DsV8OnIn45jNeuvmUcPQ==
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000929:
   version "1.0.30000929"
@@ -1805,10 +1805,10 @@ caniuse-lite@^1.0.30000971:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000973.tgz#2f8e8e54f9e6c5b7a631c9e69bfa1093d8cfd360"
   integrity sha512-/F3t/Yo8LEdRSEPCmI15fLu5vepVh9UCg/9inJXF5AAfW7xRRJkbaM2ut52iRMQMnGCLQouLbFdbOA+VEFOIsg==
 
-caniuse-lite@^1.0.30000974:
-  version "1.0.30000974"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000974.tgz#b7afe14ee004e97ce6dc73e3f878290a12928ad8"
-  integrity sha512-xc3rkNS/Zc3CmpMKuczWEdY2sZgx09BkAxfvkxlAEBTqcMHeL8QnPqhKse+5sRTi3nrw2pJwToD2WvKn1Uhvww==
+caniuse-lite@^1.0.30000975:
+  version "1.0.30000978"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000978.tgz#1e3346c27fc46bce9ac1ccd77863153a263dde56"
+  integrity sha512-H6gK6kxUzG6oAwg/Jal279z8pHw0BzrpZfwo/CA9FFm/vA0l8IhDfkZtepyJNE2Y4V6Dp3P3ubz6czby1/Mgsw==
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -2956,10 +2956,10 @@ electron-to-chromium@^1.3.137:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.146.tgz#d7010f417f87c2068fbb6700ae57767e2393eba7"
   integrity sha512-BrUq08sx7eR4PCwLbjFxXmjcbDro6DSoc1pN8VCxq76U+o9JQzJlWH/NVtcpAqcktwpE5CVvMyqHqTQfCETNoQ==
 
-electron-to-chromium@^1.3.150:
-  version "1.3.164"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.164.tgz#8680b875577882c1572c42218d53fa9ba5f71d5d"
-  integrity sha512-VLlalqUeduN4+fayVtRZvGP2Hl1WrRxlwzh2XVVMJym3IFrQUS29BFQ1GP/BxOJXJI1OFCrJ5BnFEsAe8NHtOg==
+electron-to-chromium@^1.3.164:
+  version "1.3.176"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.176.tgz#df54c54386e0f205dc6d1f5582d9e8b0cd30532b"
+  integrity sha512-hsQ/BH6x2iCvJ7WOIbNTAlsT39vsVGIVoJJ9i6ZkGXUE2LdzWsNv0xJI2uZ5/Hkqv1oTTLxAYjbtGKVJzqYbjA==
 
 elliptic@^6.0.0:
   version "6.4.1"
@@ -3109,24 +3109,24 @@ eslint-module-utils@^2.4.0:
     debug "^2.6.8"
     pkg-dir "^2.0.0"
 
-eslint-plugin-compat@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-compat/-/eslint-plugin-compat-3.1.2.tgz#965de2f3e6d7947616e927ff4de2392084d8777a"
-  integrity sha512-10XuVdl1RG53EvXNep6VwVsIbXsJM/g+M2fCvMTuw5CSVeITAw108HjC79+NPwrBbYFpdOfeIR08CviBDZQDKg==
+eslint-plugin-compat@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-compat/-/eslint-plugin-compat-3.2.0.tgz#82ab2e5df99624c45e46565474de5abc43a4af4c"
+  integrity sha512-m8sXkfh7gBV2upq3pUkXbYKi5y+qCGbvCxRASGYS9N2JDQH2dWdq1aZe0bBBOci4JECdsLD7M2CERqhseG6Zdg==
   dependencies:
     "@babel/runtime" "^7.4.5"
     ast-metadata-inferer "^0.1.1"
-    browserslist "^4.5.4"
-    caniuse-db "^1.0.30000957"
-    mdn-browser-compat-data "^0.0.74"
-    semver "^6.1.1"
+    browserslist "^4.6.3"
+    caniuse-db "^1.0.30000977"
+    mdn-browser-compat-data "^0.0.84"
+    semver "^6.1.2"
 
-eslint-plugin-html@^5.0.5:
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-5.0.5.tgz#e2388f813f75b2287cde884811eab287de8e0f56"
-  integrity sha512-v/33i3OD0fuXcRXexVyXXBOe4mLBLBQoF1UO1Uy9D+XLq4MC8K45GcQKfqjC/FnHAHp3pYUjpHHktYNCtShGmg==
+eslint-plugin-html@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-6.0.0.tgz#28e5c3e71e6f612e07e73d7c215e469766628c13"
+  integrity sha512-PQcGippOHS+HTbQCStmH5MY1BF2MaU8qW/+Mvo/8xTa/ioeMXdSP+IiaBw2+nh0KEMfYQKuTz1Zo+vHynjwhbg==
   dependencies:
-    htmlparser2 "^3.10.0"
+    htmlparser2 "^3.10.1"
 
 eslint-plugin-import@^2.18.0:
   version "2.18.0"
@@ -4127,7 +4127,7 @@ html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
-htmlparser2@^3.10.0:
+htmlparser2@^3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-3.10.1.tgz#bd679dc3f59897b6a34bb10749c855bb53a9392f"
   integrity sha512-IgieNijUMbkDovyoKObU1DUhm1iwNYE/fuifEoEHfd1oZKZDaONBSkal7Y01shxsM49R4XaMdGez3WnF9UfiCQ==
@@ -5202,10 +5202,10 @@ md5.js@^1.3.4:
     inherits "^2.0.1"
     safe-buffer "^5.1.2"
 
-mdn-browser-compat-data@^0.0.74:
-  version "0.0.74"
-  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.74.tgz#999a07ae810c6daefbf03c82ae209c8596c469fd"
-  integrity sha512-d/pTMwk3tMxdBb5ziOr3wHLFJRfYqSgGMt5aKLpCDBFYu6gk/uLGibkikv/HmMJyU3GEb9R1VvkVkCw75hVMvg==
+mdn-browser-compat-data@^0.0.84:
+  version "0.0.84"
+  resolved "https://registry.yarnpkg.com/mdn-browser-compat-data/-/mdn-browser-compat-data-0.0.84.tgz#791d0e238cff5779fae589f99f5b2c7b84ea44b5"
+  integrity sha512-fAznuGNaQMQiWLVf+gyp33FaABTglYWqMT7JqvH+4RZn2UQPD12gbMqxwP9m0lj8AAbNpu5/kD6n4Ox1SOffpw==
   dependencies:
     extend "3.0.2"
 
@@ -7630,6 +7630,11 @@ semver@^6.1.1:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.1.1.tgz#53f53da9b30b2103cd4f15eab3a18ecbcb210c9b"
   integrity sha512-rWYq2e5iYW+fFe/oPPtYJxYgjBm8sC4rmoGdUOgBB7VnwKt6HrL793l2voH1UlsyYZpJ4g0wfjnTEO1s1NP2eQ==
 
+semver@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-6.1.2.tgz#079960381376a3db62eb2edc8a3bfb10c7cfe318"
+  integrity sha512-z4PqiCpomGtWj8633oeAdXm1Kn1W++3T8epkZYnwiVgIYIJ0QHszhInYSJTYxebByQH7KVCEAn8R9duzZW2PhQ==
+
 semver@~5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
@@ -7869,10 +7874,10 @@ snyk-go-plugin@1.10.2:
     snyk-go-parser "1.3.1"
     tmp "0.0.33"
 
-snyk-gradle-plugin@2.12.4:
-  version "2.12.4"
-  resolved "https://registry.yarnpkg.com/snyk-gradle-plugin/-/snyk-gradle-plugin-2.12.4.tgz#646c787af92985035c25c2bb7f2609ef64acece7"
-  integrity sha512-kVqBOtMZ4EMwUhQ3nj/7R1Pa7FXIl13xTLQehWNKGEkkOu4ljjnXWsktWTOpLQmOgjHd436WF5SIulwUnNG54Q==
+snyk-gradle-plugin@2.12.5:
+  version "2.12.5"
+  resolved "https://registry.yarnpkg.com/snyk-gradle-plugin/-/snyk-gradle-plugin-2.12.5.tgz#6da1c9135b4cee2d6cd32653e569a1f56977d173"
+  integrity sha512-AmiQQUL0nlY3SjWUSMSmmbp273ETJzsqvk1E8jf+G/Q3mRl9xZ6BkPMebweD/y5d/smoQmr6rKL57OG+OXoi3w==
   dependencies:
     "@types/debug" "^4.1.4"
     chalk "^2.4.2"
@@ -8011,10 +8016,10 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.185.0:
-  version "1.185.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.185.0.tgz#ab00951516cebccb3bbb6e1edbfc16efb8a9d8b7"
-  integrity sha512-lfqFNP+8byTQtWaSaH8wZSs/VcthA99EM6CTR5FBNcNXMl8y+rcxxAK9F94YcFdHw8u6suB0CNaDAPvEZ6q3bw==
+snyk@^1.185.5:
+  version "1.185.5"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.185.5.tgz#cd903edd8db265f2d863186f72924a55cfab321d"
+  integrity sha512-thiYonTVgfcKA0qq//adcCE2Lmnz6vXG7bii7Fuv3sKMjmiHxv6pkguqgEJ/m8gU5KmTXZXoFLewvAqNj/Yqrg==
   dependencies:
     "@snyk/dep-graph" "1.8.1"
     "@snyk/gemfile" "1.2.0"
@@ -8038,7 +8043,7 @@ snyk@^1.185.0:
     snyk-config "^2.2.1"
     snyk-docker-plugin "1.25.1"
     snyk-go-plugin "1.10.2"
-    snyk-gradle-plugin "2.12.4"
+    snyk-gradle-plugin "2.12.5"
     snyk-module "1.9.1"
     snyk-mvn-plugin "2.3.0"
     snyk-nodejs-lockfile-parser "1.13.0"
