@@ -26,7 +26,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "bulma": "^0.7.5",
-    "snyk": "^1.192.0"
+    "snyk": "^1.192.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",
@@ -74,9 +74,7 @@
     ]
   },
   "browserslist": [
-    "last 3 years",
-    "safari >= 8",
-    "IE 10"
+    "defaults"
   ],
   "eslintConfig": {
     "env": {
