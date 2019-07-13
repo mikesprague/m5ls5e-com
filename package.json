@@ -17,16 +17,16 @@
     "email": "mikesprague@gmail.com"
   },
   "engines": {
-    "node": ">= 11.10",
-    "npm": ">= 6.7",
-    "yarn": ">= 1.13"
+    "node": ">= 10.x",
+    "npm": ">= 6.x",
+    "yarn": ">= 1.x"
   },
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "bulma": "^0.7.5",
-    "snyk": "^1.192.4"
+    "snyk": "^1.193.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
