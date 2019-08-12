@@ -26,7 +26,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.21",
     "@fortawesome/free-brands-svg-icons": "^5.10.1",
     "bulma": "^0.7.5",
-    "snyk": "^1.211.0"
+    "snyk": "^1.216.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -43,8 +43,8 @@
     "cross-env": "^5.2.0",
     "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-compat": "^3.3.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
@@ -55,12 +55,12 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.18.2",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^7.2.0",
     "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^1.4.1",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2",
+    "webpack-dev-server": "^3.8.0",
     "webpackbar": "^4.0.0"
   },
   "babel": {
