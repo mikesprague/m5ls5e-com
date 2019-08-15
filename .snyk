@@ -28,3 +28,5 @@ patch:
         patched: '2019-07-03T21:39:03.223Z'
     - snyk > snyk-mvn-plugin > lodash:
         patched: '2019-07-03T21:39:03.223Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-08-15T18:22:50.376Z'
