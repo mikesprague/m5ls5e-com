@@ -10,7 +10,7 @@
     "serve:dev": "cross-env NODE_ENV=development yarn serve",
     "serve:prod": "cross-env NODE_ENV=production yarn serve",
     "snyk-protect": "snyk protect",
-    "prepublish": "yarn snyk-protect"
+    "prepublish": "npm run snyk-protect && yarn snyk-protect"
   },
   "author": {
     "name": "Michael Sprague",
@@ -26,7 +26,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-brands-svg-icons": "^5.10.2",
     "bulma": "^0.7.5",
-    "snyk": "^1.219.0"
+    "snyk": "^1.220.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -106,16 +106,25 @@
       "prefer-arrow-callback": "warn",
       "arrow-spacing": "error",
       "eqeqeq": "error",
-      "quotes": ["error", "single", {
+      "quotes": [
+        "error",
+        "single",
+        {
           "avoidEscape": true,
           "allowTemplateLiterals": true
         }
       ],
-      "max-len": ["warn", {
-          "code": 120, "tabWidth": 4, "ignoreUrls": true
+      "max-len": [
+        "warn",
+        {
+          "code": 120,
+          "tabWidth": 4,
+          "ignoreUrls": true
         }
       ],
-      "import/no-cycle": ["warn", {
+      "import/no-cycle": [
+        "warn",
+        {
           "maxDepth": 1
         }
       ],
@@ -132,5 +141,6 @@
       "all"
     ],
     "printWidth": 120
-  }
+  },
+  "snyk": true
 }
