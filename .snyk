@@ -28,3 +28,15 @@ patch:
         patched: '2019-07-03T21:39:03.223Z'
     - snyk > snyk-mvn-plugin > lodash:
         patched: '2019-07-03T21:39:03.223Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-08-26T21:52:25.423Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-08-26T21:52:25.423Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-08-26T21:52:25.423Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-08-26T21:52:25.423Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-08-26T21:52:25.423Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-08-26T21:52:25.423Z'
