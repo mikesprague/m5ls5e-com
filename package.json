@@ -26,7 +26,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-brands-svg-icons": "^5.10.2",
     "bulma": "^0.7.5",
-    "snyk": "^1.224.0"
+    "snyk": "^1.226.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
