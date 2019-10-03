@@ -10,7 +10,7 @@
     "serve:dev": "cross-env NODE_ENV=development yarn serve",
     "serve:prod": "cross-env NODE_ENV=production yarn serve",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect && yarn snyk-protect"
+    "prepublish": "yarn snyk-protect"
   },
   "author": {
     "name": "Michael Sprague",
@@ -26,7 +26,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "bulma": "^0.7.5",
-    "snyk": "^1.230.3"
+    "snyk": "^1.230.4"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
