@@ -45,6 +45,7 @@
     "cssnano": "^4.1.10",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.8.0",
     "eslint-plugin-compat": "^3.3.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.19.1",
@@ -82,7 +83,8 @@
       "es6": true
     },
     "extends": [
-      "airbnb-base"
+      "airbnb-base",
+      "prettier"
     ],
     "plugins": [
       "compat",
