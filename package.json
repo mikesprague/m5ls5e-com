@@ -74,9 +74,16 @@
       "@babel/preset-env"
     ]
   },
-  "browserslist": [
-    "defaults"
-  ],
+  "browserslist": {
+    "development": [
+      "last 1 version1"
+    ],
+    "production": [
+      "> 1%",
+      "last 2 versions",
+      "not ie <= 10"
+    ]
+  },
   "eslintConfig": {
     "env": {
       "browser": true,
