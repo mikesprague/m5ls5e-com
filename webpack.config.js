@@ -89,8 +89,8 @@ const config = {
       compress: true,
     }),
     new CopyWebpackPlugin([{
-      from: './src/images/pixels.png',
-      to: 'images/pixels.png',
+      from: './src/images/',
+      to: 'images/',
       force: true,
     }]),
     new CopyWebpackPlugin([{
