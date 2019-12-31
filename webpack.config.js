@@ -93,6 +93,11 @@ const config = {
       to: 'images/pixels.png',
       force: true,
     }]),
+    new CopyWebpackPlugin([{
+      from: './src/thanksgiving-1984/',
+      to: 'thanksgiving-1984/',
+      force: true,
+    }]),
     new CompressionPlugin({
       filename: '[path].gz[query]',
       algorithm: 'gzip',
