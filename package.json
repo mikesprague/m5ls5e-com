@@ -10,7 +10,7 @@
     "serve:dev": "cross-env NODE_ENV=development yarn serve",
     "serve:prod": "cross-env NODE_ENV=production yarn serve",
     "snyk-protect": "snyk protect",
-    "prepublish": "yarn snyk-protect"
+    "prepublish": "yarn run snyk-protect && yarn snyk-protect"
   },
   "author": {
     "name": "Michael Sprague",
