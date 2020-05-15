@@ -88,16 +88,24 @@ const config = {
       template: './src/index.html',
       compress: true,
     }),
-    new CopyWebpackPlugin([{
-      from: './src/images/',
-      to: 'images/',
-      force: true,
-    }]),
-    new CopyWebpackPlugin([{
-      from: './src/thanksgiving-1984/',
-      to: 'thanksgiving-1984/',
-      force: true,
-    }]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './src/images/',
+          to: 'images/',
+          force: true,
+        },
+      ],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './src/thanksgiving-1984/',
+          to: 'thanksgiving-1984/',
+          force: true,
+        },
+      ],
+    }),
     new CompressionPlugin({
       filename: '[path].gz[query]',
       algorithm: 'gzip',
