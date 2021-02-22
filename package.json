@@ -23,11 +23,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.31",
-    "@fortawesome/free-brands-svg-icons": "^5.15.0",
-    "bulma": "^0.9.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "bulma": "^0.9.2",
     "cross-env": "^7.0.3",
-    "snyk": "^1.430.0"
+    "snyk": "^1.437.4"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
