@@ -1,14 +1,10 @@
 const path = require('path');
-const WebPackBar = require('webpackbar');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const purgecss = require('@fullhuman/postcss-purgecss');
-const cssnano = require('cssnano');
-const autoprefixer = require('autoprefixer');
 
 const mode = process.env.NODE_ENV || 'production';
 
@@ -21,98 +17,100 @@ const config = {
     minimizer: [
       new TerserPlugin({
         parallel: true,
-        sourceMap: true,
       }),
-      new OptimizeCSSAssetsPlugin(),
+      new CssMinimizerPlugin(),
     ],
   },
   mode,
+  devServer: {
+    open: false,
+    port: 3000,
+    publicPath: 'http://localhost:3000/',
+    stats: 'minimal',
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'scripts/[name].bundle.js',
   },
   module: {
     rules: [{
-      test: /\.(js)$/,
-      use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/env'],
-        },
-      }],
-    },
-    {
-      rules: [{
-        test: /\.(sa|sc|c)ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-              plugins() {
-                return [
-                  autoprefixer(),
-                  cssnano({ preset: 'default' }),
-                  purgecss({
-                    content: ['./src/**/*.html'],
-                    fontFace: true,
-                  }),
-                ];
+        test: /\.(js)$/,
+        use: [{
+          loader: 'babel-loader',
+        }],
+      },
+      {
+        rules: [{
+          test: /\.(sa|sc|c)ss$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
               },
             },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
+            {
+              loader: 'postcss-loader',
             },
-          },
-        ],
-      }],
-    }],
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true,
+              },
+            },
+          ],
+        }],
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            publicPath: '/images',
+            emitFile: true,
+          }
+        }]
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            publicPath: '/fonts',
+            emitFile: true,
+          }
+        }]
+      }
+    ],
   },
   plugins: [
-    new WebPackBar(),
     new MiniCssExtractPlugin({
-      filename: 'css/styles.css',
+      filename: './css/styles.css',
     }),
     new HtmlWebpackPlugin({
       inject: false,
       template: './src/index.html',
+      filename: './index.html',
       compress: true,
     }),
     new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: './src/images/',
-          to: 'images/',
-          force: true,
-        },
-      ],
+      patterns: [{
+        from: './src/images/',
+        to: './images/',
+        force: true,
+      }, ],
     }),
     new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: './src/thanksgiving-1984/',
-          to: 'thanksgiving-1984/',
-          force: true,
-        },
-      ],
+      patterns: [{
+        from: './src/thanksgiving-1984/',
+        to: './thanksgiving-1984/',
+        force: true,
+      }, ],
     }),
-    new CompressionPlugin({
-      filename: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: /\.js$|\.css$|\.html$/,
-      threshold: 8192,
-      minRatio: 0.8,
-    }),
+    new CompressionPlugin(),
   ],
 };
 
