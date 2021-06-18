@@ -98,6 +98,13 @@ const config = {
     }),
     new CopyWebpackPlugin({
       patterns: [{
+        from: './src/CNAME',
+        to: './CNAME',
+        force: true,
+      }, ],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{
         from: './src/images/',
         to: './images/',
         force: true,
