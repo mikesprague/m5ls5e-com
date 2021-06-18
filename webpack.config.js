@@ -99,7 +99,7 @@ const config = {
     new CopyWebpackPlugin({
       patterns: [{
         from: './src/CNAME',
-        to: './CNAME',
+        to: './',
         force: true,
       }, ],
     }),
