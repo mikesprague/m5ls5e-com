@@ -62,16 +62,20 @@ const config = {
           ],
         }],
       },
+      // {
+      //   test: /\.(png|jpg|gif|svg)$/,
+      //   use: [{
+      //     loader: 'file-loader',
+      //     options: {
+      //       name: '[name].[ext]',
+      //       publicPath: '/images',
+      //       emitFile: true,
+      //     }
+      //   }]
+      // },
       {
-        test: /\.(png|jpg|gif|svg)$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            publicPath: '/images',
-            emitFile: true,
-          }
-        }]
+        test: /\.(png|jpg|gif|svg)$/i,
+        type: 'asset',
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
