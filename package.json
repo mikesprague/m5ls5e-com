@@ -26,7 +26,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "bulma": "^0.9.3",
     "cross-env": "^7.0.3",
-    "snyk": "^1.789.0"
+    "snyk": "^1.813.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
