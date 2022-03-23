@@ -7,9 +7,7 @@
     "build": "yarn clean && cross-env NODE_ENV=production yarn assets",
     "clean": "rm -rf dist",
     "serve": "cross-env NODE_ENV=development webpack serve",
-    "serve:prod": "cross-env NODE_ENV=production yarn serve",
-    "snyk-protect": "snyk protect",
-    "prepublish": "yarn snyk-protect"
+    "serve:prod": "cross-env NODE_ENV=production yarn serve"
   },
   "author": {
     "name": "Michael Sprague",
@@ -22,11 +20,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "bulma": "^0.9.3",
-    "cross-env": "^7.0.3",
-    "snyk": "^1.826.0"
+    "cross-env": "^7.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
