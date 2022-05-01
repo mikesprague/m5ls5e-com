@@ -84,3 +84,6 @@ typings/
 .vscode
 .vscode-insiders
 *.code-workspace
+
+# build dir
+dist/
