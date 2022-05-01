@@ -22,12 +22,6 @@ const config = {
     ],
   },
   mode,
-  devServer: {
-    open: false,
-    port: 3000,
-    publicPath: 'http://localhost:3000/',
-    stats: 'minimal',
-  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'scripts/[name].bundle.js',
