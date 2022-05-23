@@ -60,26 +60,6 @@
     "webpack": "5.72.1",
     "webpack-cli": "4.9.2"
   },
-  "babel": {
-    "plugins": [
-      "@babel/plugin-transform-runtime",
-      "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-transform-object-assign"
-    ],
-    "presets": [
-      "@babel/preset-env"
-    ]
-  },
-  "browserslist": {
-    "development": [
-      "last 1 version"
-    ],
-    "production": [
-      "> 2%",
-      "last 2 versions",
-      "not ie <= 10"
-    ]
-  },
   "eslintConfig": {
     "env": {
       "browser": true,
@@ -95,8 +75,11 @@
       "import",
       "prettier"
     ],
-     "ignorePatterns": [
+    "ignorePatterns": [
       "**/.history/*",
+      "**/.github/*",
+      "**/.devcontainer/*",
+      "**/dist/*",
       "**/node_modules/*"
     ],
     "parserOptions": {
@@ -108,47 +91,13 @@
         "modules": true
       }
     },
-    "rules": {
-      "curly": "error",
-      "object-curly-newline": "error",
-      "semi": "error",
-      "prefer-arrow-callback": "warn",
-      "arrow-spacing": "error",
-      "eqeqeq": "error",
-      "quotes": [
-        "error",
-        "single",
-        {
-          "avoidEscape": true,
-          "allowTemplateLiterals": true
-        }
-      ],
-      "max-len": [
-        "warn",
-        {
-          "code": 120,
-          "tabWidth": 4,
-          "ignoreUrls": true
-        }
-      ],
-      "import/no-cycle": [
-        "warn",
-        {
-          "maxDepth": 1
-        }
-      ],
-      "import/prefer-default-export": "off"
-    }
+    "rules": {}
   },
   "prettier": {
     "singleQuote": true,
     "trailingComma": "all",
     "arrowParens": "always",
     "semi": true,
-    "tabWidth": 2,
-    "plugins": [
-      "all"
-    ],
-    "printWidth": 120
+    "tabWidth": 2
   }
 }
