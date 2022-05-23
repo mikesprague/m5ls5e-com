@@ -23,16 +23,14 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
-      - name: Install Dependencies (yarn)
-        run: yarn
+      - name: Install Dependencies (npm)
+        run: npm install
         env:
           FONT_AWESOME_TOKEN: ${{secrets.FONT_AWESOME_TOKEN}}
-          SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
       - name: Build Site (webpack)
-        run: yarn build
+        run: npm run build
         env:
           FONT_AWESOME_TOKEN: ${{secrets.FONT_AWESOME_TOKEN}}
-          SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
       - name: Deploy Site (gh pages)
         uses: crazy-max/ghaction-github-pages@v2
         with:

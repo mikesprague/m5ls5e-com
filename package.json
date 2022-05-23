@@ -16,8 +16,7 @@
   },
   "engines": {
     "node": ">= 16.x",
-    "npm": ">= 7.x",
-    "yarn": ">= 1.22.x"
+    "npm": ">= 8.x"
   },
   "license": "MIT",
   "dependencies": {
@@ -149,6 +148,5 @@
       "all"
     ],
     "printWidth": 120
-  },
-  "snyk": true
+  }
 }
