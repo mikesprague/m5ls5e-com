@@ -1,7 +1,6 @@
 const path = require('path');
+const { ESBuildMinifyPlugin } = require('esbuild-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
@@ -15,10 +14,10 @@ const config = {
   devtool: 'source-map',
   optimization: {
     minimizer: [
-      new TerserPlugin({
-        parallel: true,
-      }),
-      new CssMinimizerPlugin(),
+      new ESBuildMinifyPlugin({
+        target: 'esnext',
+        css: true,
+      })
     ],
   },
   mode,
@@ -30,7 +29,10 @@ const config = {
     rules: [{
         test: /\.(js)$/,
         use: [{
-          loader: 'babel-loader',
+          loader: 'esbuild-loader',
+            options: {
+              target: 'esnext'
+            }
         }],
       },
       {
@@ -51,6 +53,13 @@ const config = {
               loader: 'sass-loader',
               options: {
                 sourceMap: true,
+              },
+            },
+            {
+              loader: 'esbuild-loader',
+              options: {
+                loader: 'css',
+                minify: true
               },
             },
           ],
