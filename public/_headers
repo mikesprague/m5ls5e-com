@@ -13,5 +13,4 @@
   Vary: Origin
 
 /api/*
-  Cache-Control: max-age=300, s-maxage=300;
   Access-Control-Allow-Origin: *
