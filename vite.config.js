@@ -1,4 +1,7 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
+
+const isDev = process.env.NODE_ENV !== 'production';
 
 export default defineConfig({
   root: 'src',
@@ -6,8 +9,10 @@ export default defineConfig({
     outDir: '../dist',
     rollupOptions: {
       input: {
-        main: './src/index.html',
-        nested: './src/thanksgiving-1984/index.html',
+        main: isDev ? resolve(__dirname, 'index.html') : './index.html',
+        nested: isDev
+          ? resolve(__dirname, 'thanksgiving-1984/index.html')
+          : './thanksgiving-1984/index.html',
       },
     },
   },
@@ -15,7 +20,6 @@ export default defineConfig({
   base: './',
   outDir: './',
   server: {
-    port: 3000,
     strictPort: true,
   },
 });
