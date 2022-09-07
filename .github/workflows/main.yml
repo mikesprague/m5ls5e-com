@@ -6,12 +6,20 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
-    paths-ignore:
-      - "README.md"
+    paths:
+      - "src/**/*.*"
+      - "public/**/*.*"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/**.yml"
   pull_request:
     branches: [ main ]
-    paths-ignore:
-      - "README.md"
+    paths:
+      - "src/**/*.*"
+      - "public/**/*.*"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/**.yml"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -37,15 +45,11 @@ jobs:
       - name: 👷 Checkout Repo
         uses: actions/checkout@v2
       
-      - name: 🏗️ Install Dependencies (npm)
+      - name: 🏗️ Install Dependencies with npm
         run: npm install
-        env:
-          FONT_AWESOME_TOKEN: ${{secrets.FONT_AWESOME_TOKEN}}
       
-      - name: 🏗️ Build Site (webpack)
+      - name: 🏗️ Build Site with Vite
         run: npm run build
-        env:
-          FONT_AWESOME_TOKEN: ${{secrets.FONT_AWESOME_TOKEN}}
       
       - name: 🏗️ Setup Pages
         uses: actions/configure-pages@v1
