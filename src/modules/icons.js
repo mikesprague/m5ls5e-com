@@ -1,15 +1,11 @@
-import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { dom, library } from '@fortawesome/fontawesome-svg-core';
 import {
   faGithub,
-  faTwitter,
   faLinkedin,
+  faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 
 export function initFontAwesomeIcons() {
-  library.add(
-    faGithub,
-    faTwitter,
-    faLinkedin,
-  );
+  library.add(faGithub, faTwitter, faLinkedin);
   dom.watch();
 }
