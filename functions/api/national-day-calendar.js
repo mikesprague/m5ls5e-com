@@ -2,7 +2,24 @@ import cheerio from 'cheerio';
 
 // data source: https://nationaldaycalendar.com
 
-export const onRequestGet = async () => {
+export const onRequestGet = async (context) => {
+  const CACHE_NAME = 'national-day-calendar';
+  const { request } = context;
+
+  let cache = await caches.open(CACHE_NAME);
+
+  const cachedData = await cache.match(request);
+
+  if (cachedData) {
+    console.log('🚀 using cached data!');
+
+    const returnData = await cachedData.json();
+
+    return new Response(JSON.stringify(returnData), cachedData);
+  }
+
+  console.log('😢 no cache, fetching new data');
+
   const allData = [];
   const pageData = await fetch('https://nationaldaycalendar.com/')
     .then(async (response) => {
@@ -57,11 +74,16 @@ export const onRequestGet = async () => {
     }
   }
 
-  return new Response(JSON.stringify(allData), {
+  const response = new Response(JSON.stringify(allData), {
     status: 200,
     headers: {
       'Content-Type': 'application/json',
       'Cache-Control': 'max-age=3600, s-maxage=3600',
     },
   });
+
+  // cache data;
+  context.waitUntil(cache.put(request, response.clone()));
+
+  return response;
 };

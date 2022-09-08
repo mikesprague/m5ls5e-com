@@ -2,7 +2,24 @@ const dedupeArrayOfObjects = (objArray, key) => [
   ...new Map(objArray.map((item) => [item[key], item])).values(),
 ];
 
-export const onRequestGet = async () => {
+export const onRequestGet = async (context) => {
+  const CACHE_NAME = 'github-trending-repos';
+  const { request } = context;
+
+  let cache = await caches.open(CACHE_NAME);
+
+  const cachedData = await cache.match(request);
+
+  if (cachedData) {
+    console.log('🚀 using cached data!');
+
+    const returnData = await cachedData.json();
+
+    return new Response(JSON.stringify(returnData), cachedData);
+  }
+
+  console.log('😢 no cache, fetching new data');
+
   const allData = [];
 
   try {
@@ -43,13 +60,18 @@ export const onRequestGet = async () => {
     const finalData = dedupeArrayOfObjects(allData, 'title');
     // console.log(finalData);
 
-    return new Response(JSON.stringify(finalData), {
+    const response = new Response(JSON.stringify(finalData), {
       status: 200,
       headers: {
         'Content-Type': 'application/json',
         'Cache-Control': 'max-age=3600, s-maxage=3600',
       },
     });
+
+    // cache data;
+    context.waitUntil(cache.put(request, response.clone()));
+
+    return response;
   } catch (error) {
     console.error(error);
 
