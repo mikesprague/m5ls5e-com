@@ -58,6 +58,9 @@
     "vite": "3.1.0",
     "wrangler": "2.0.29"
   },
+  "peerDependencies": {
+    "@miniflare/queues": "2.8.0"
+  },
   "babel": {
     "presets": [
       "@babel/preset-env"
@@ -108,7 +111,8 @@
     },
     "rules": {
       "node/no-unpublished-import": "warn",
-      "node/no-missing-import": "warn"
+      "node/no-missing-import": "warn",
+      "no-console": "warn"
     },
     "ignorePatterns": [
       "dist/",
