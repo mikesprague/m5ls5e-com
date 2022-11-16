@@ -24,7 +24,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "6.2.0",
+    "@fortawesome/fontawesome-svg-core": "6.2.1",
     "@fortawesome/free-brands-svg-icons": "6.2.0",
     "bulma": "0.9.4",
     "cheerio": "1.0.0-rc.12"
