@@ -36,6 +36,7 @@
     "@fullhuman/postcss-purgecss": "5.0.0",
     "autoprefixer": "10.4.13",
     "cssnano": "5.1.14",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "8.28.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-stylelint": "17.0.0",
@@ -127,5 +128,10 @@
     "trailingComma": "all",
     "semi": true,
     "tabWidth": 2
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
