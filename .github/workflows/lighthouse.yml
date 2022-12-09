@@ -1,8 +1,15 @@
 name: Lighthouse Check
 on: 
   push:
-    tags: [ "v*" ]
-    
+    branches-ignore:
+      - "dependabot/*"
+    paths:
+      - "src/**/*"
+      - "public/**/*"
+      - "package*.json"
+      - "vite.config.js"
+      - ".github/workflows/*.yml"
+
   schedule:
     - cron: "0 0/6 * * *"
     
