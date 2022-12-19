@@ -37,7 +37,7 @@
     "autoprefixer": "10.4.13",
     "cssnano": "5.1.14",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "8.29.0",
+    "eslint": "8.30.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-stylelint": "17.1.0",
     "eslint-plugin-babel": "5.3.1",
