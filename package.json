@@ -24,8 +24,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "6.2.1",
     "@fortawesome/free-brands-svg-icons": "6.3.0",
+    "@fortawesome/fontawesome-svg-core": "6.3.0",
     "bulma": "0.9.4",
     "cheerio": "1.0.0-rc.12"
   },
@@ -47,7 +47,7 @@
     "eslint-plugin-prettier": "4.2.1",
     "postcss": "8.4.21",
     "postcss-cli": "10.1.0",
-    "prettier": "2.8.3",
+    "prettier": "2.8.4",
     "prettier-eslint": "15.0.1",
     "sass": "1.58.0",
     "stylelint": "14.16.1",
