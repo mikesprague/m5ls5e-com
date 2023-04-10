@@ -17,7 +17,7 @@ export const onRequestGet = async (context) => {
   console.log('😢 no cache, fetching new data');
 
   const postsData = await fetch(
-    'https://mikesprague.github.io/api/national-day.json',
+    'https://mikesprague.github.io/api/national-day/',
   )
     .then(async (response) => {
       const returnData = await response.json();
