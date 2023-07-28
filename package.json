@@ -55,7 +55,7 @@
     "stylelint-config-standard-scss": "10.0.0",
     "stylelint-prettier": "4.0.1",
     "vite": "4.4.7",
-    "wrangler": "3.3.0"
+    "wrangler": "3.4.0"
   },
   "peerDependencies": {
     "@miniflare/queues": "2.8.0"
