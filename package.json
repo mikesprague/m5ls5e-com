@@ -33,7 +33,7 @@
     "@biomejs/biome": "1.4.1",
     "@fullhuman/postcss-purgecss": "5.0.0",
     "autoprefixer": "10.4.16",
-    "cssnano": "6.0.2",
+    "cssnano": "6.0.3",
     "cz-git": "^1.8.0",
     "postcss": "8.4.32",
     "postcss-cli": "11.0.0",
