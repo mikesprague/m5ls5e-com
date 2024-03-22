@@ -26,7 +26,7 @@
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "6.5.1",
     "@fortawesome/fontawesome-svg-core": "6.5.1",
-    "bulma": "0.9.4",
+    "bulma": "1.0.0",
     "cheerio": "1.0.0-rc.12"
   },
   "devDependencies": {
