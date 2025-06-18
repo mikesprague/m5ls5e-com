@@ -42,7 +42,7 @@
     "stylelint-config-standard": "38.0.0",
     "stylelint-config-standard-scss": "15.0.1",
     "vite": "6.3.5",
-    "wrangler": "4.20.0"
+    "wrangler": "4.20.2"
   },
   "browserslist": {
     "development": ["last 1 version"],
