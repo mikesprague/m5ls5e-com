@@ -27,7 +27,7 @@
     "@fortawesome/free-brands-svg-icons": "6.7.2",
     "@fortawesome/fontawesome-svg-core": "6.7.2",
     "bulma": "1.0.4",
-    "cheerio": "1.1.0"
+    "cheerio": "1.1.2"
   },
   "devDependencies": {
     "@biomejs/biome": "2.1.2",
