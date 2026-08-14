@@ -37,7 +37,7 @@
     "@fullhuman/postcss-purgecss": "8.0.0",
     "autoprefixer": "10.5.4",
     "cssnano": "8.0.5",
-    "cz-git": "1.13.1",
+    "cz-git": "1.13.2",
     "oxfmt": "0.63.0",
     "oxlint": "1.78.0",
     "postcss": "8.5.26",
