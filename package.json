@@ -38,7 +38,7 @@
     "autoprefixer": "10.5.4",
     "cssnano": "8.0.7",
     "cz-git": "1.13.2",
-    "oxfmt": "0.63.0",
+    "oxfmt": "0.64.0",
     "oxlint": "1.79.0",
     "postcss": "8.5.26",
     "postcss-cli": "11.0.1",
