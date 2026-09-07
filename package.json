@@ -40,7 +40,7 @@
     "cz-git": "1.14.0",
     "oxfmt": "0.66.0",
     "oxlint": "1.80.0",
-    "postcss": "8.5.26",
+    "postcss": "8.5.28",
     "postcss-cli": "11.0.1",
     "sass": "1.104.0",
     "stylelint": "17.15.0",
